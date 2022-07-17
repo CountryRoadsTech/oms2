@@ -62,4 +62,7 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+
+  # Use Annotate to automatically add a comment with the database table schema to the top of relevant Rails files
+  gem "annotate"
 end
