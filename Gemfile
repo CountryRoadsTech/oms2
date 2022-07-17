@@ -87,7 +87,7 @@ group :development, :test do
   gem 'rubocop-performance', require: false
 
   # Brakeman is used for static security analysis
-  gem "brakeman"
+  gem 'brakeman'
 end
 
 group :development do
@@ -102,4 +102,7 @@ group :development do
 
   # Stackprof is used by Rails Mini Profiler to record Flamegraphs
   gem 'stackprof'
+
+  # Bullet is used to detect N+1 database queries that should be optimized
+  gem 'bullet'
 end
