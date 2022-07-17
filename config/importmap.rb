@@ -9,3 +9,4 @@ pin "trix"
 pin "@rails/actiontext", to: "actiontext.js"
 pin "popper", to: "popper.js", preload: true
 pin "bootstrap", to: "bootstrap.min.js", preload: true
+pin "local-time", to: "local-time.js", preload: true

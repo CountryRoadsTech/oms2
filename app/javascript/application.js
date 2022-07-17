@@ -7,3 +7,5 @@ import "@rails/actiontext"
 
 import "popper"
 import "bootstrap"
+
+import "local-time"

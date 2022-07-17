@@ -66,6 +66,9 @@ gem "paper_trail"
 # Pagy is used to paginate models in views
 gem "pagy", "~> 5.10"
 
+# Local Time is used to display timestamps to users in their local timezone
+gem "local_time"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
