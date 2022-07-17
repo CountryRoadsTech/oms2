@@ -7,4 +7,15 @@ class ApplicationController < ActionController::Base
 
   # Include Pagination's backend methods
   include Pagy::Backend
+
+  # Store Breadcrumbs for which pages the user is currently on
+  helper_method :breadcrumbs
+
+  def breadcrumbs
+    @breadcrumbs ||= []
+  end
+
+  def add_breadcrumb(name, url = nil)
+    breadcrumbs << Breadcrumb.new(name, url)
+  end
 end
