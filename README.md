@@ -11,7 +11,7 @@ If you are in development mode:
 
 
 ## Testing
-Overcommit is used to run these checks before each 'git commit'.
+Overcommit is used to run these checks before each 'git commit' and 'git push'.
 
 Style analysis of source code is enforced with Rubocop:
 

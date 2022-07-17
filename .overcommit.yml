@@ -12,9 +12,6 @@
 #
 # For a complete list of options that you can use to customize hooks, see:
 # https://github.com/sds/overcommit#configuration
-#
-# Uncomment the following lines to make the configuration take effect.
-
 PreCommit:
   RuboCop:
     enabled: true
