@@ -45,6 +45,9 @@ gem "image_processing", "~> 1.2"
 # Use Bootstrap as the main CSS framework
 gem "bootstrap", "~> 5.1.3"
 
+# Use Good Job as the Active Job adapter for background job processing
+gem "good_job"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
