@@ -4,4 +4,7 @@ class ApplicationController < ActionController::Base
 
   # Track which user made which change with Paper Trail
   # before_action :set_paper_trail_whodunnit
+
+  # Include Pagination's backend methods
+  include Pagy::Backend
 end

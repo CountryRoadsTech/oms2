@@ -63,6 +63,9 @@ gem "friendly_id", "~> 5.4.2"
 # Paper Trail tracks and stores changes to models
 gem "paper_trail"
 
+# Pagy is used to paginate models in views
+gem "pagy", "~> 5.10"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
