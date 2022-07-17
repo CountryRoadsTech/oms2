@@ -56,7 +56,8 @@ Rails.application.configure do
   config.log_tags = [ :request_id ]
 
   # Use a different cache store in production.
-  # config.cache_store = :mem_cache_store
+  config.cache_store = :redis_cache_store, { url: ENV['REDIS_SERVER_URL'],
+                                             pool_size: 5, pool_timeout: 5 }
 
   # Run Good Job in a seperate thread within the main rails server process
   config.good_job.execution_mode = :async

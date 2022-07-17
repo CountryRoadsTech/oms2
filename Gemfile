@@ -27,8 +27,11 @@ gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
 
-# Use Redis adapter to run Action Cable in production
+# Use Redis adapter to run Action Cable in production and as the application's cache store
 gem "redis", "~> 4.0"
+
+# Use Connection Pool to increase the number of connections to the Redis server per process
+gem "connection_pool"
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem "tzinfo-data", platforms: %i[ mingw mswin x64_mingw jruby ]
@@ -47,6 +50,9 @@ gem "bootstrap", "~> 5.1.3"
 
 # Use Good Job as the Active Job adapter for background job processing
 gem "good_job"
+
+# Hiredis is a high-speed client library for connecting to Redis servers
+gem "hiredis"
 
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
