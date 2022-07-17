@@ -60,6 +60,9 @@ gem "simple_form"
 # Friendly ID allows setting a model attribute other than ID for its URL slug
 gem "friendly_id", "~> 5.4.2"
 
+# Paper Trail tracks and stores changes to models
+gem "paper_trail"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
