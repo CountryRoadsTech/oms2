@@ -1,4 +1,4 @@
-# OMS
+# OMS ![Continuous Integration](https://github.com/CountryRoadsTech/oms/actions/workflows/continuous_integration.yml/badge.svg)
 
 ## Helpful Internal Links
 If you are an admin user:
