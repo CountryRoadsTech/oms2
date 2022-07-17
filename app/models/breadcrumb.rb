@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# Breadcrumb is a non-datbase backed model used to track the user's current location in the website
 class Breadcrumb
   attr_reader :name, :url
 

@@ -1,4 +1,7 @@
-modeule Archivable
+# frozen_string_literal: true
+
+# Enables soft deleting models so users can later restore them
+module Archivable
   extends ActiveSupport::Concern
 
   included do
@@ -8,12 +11,12 @@ modeule Archivable
   end
 
   def archive!
-    touch(:archived_at)
+    update(archived_at: Time.current)
   end
 
   def restore!(opts = {})
     self.class.transaction do
-      update_column :archived_at, nil
+      update(archived_at: nil)
       restore_associations if opts[:recursive]
     end
 
@@ -34,9 +37,8 @@ modeule Archivable
     archived_associations.each do |archived_association|
       archived_records = public_send(archived_association.name)
 
-      archived_records.each.do |archived_record|
+      archived_records.each.do | archived_record |
         archived_record.restore!(recursive: true)
-      end
     end
   end
 end

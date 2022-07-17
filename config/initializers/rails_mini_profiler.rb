@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Rails Mini Profiler Initializer (0.7.2)
 
 # Customize to your hearts content. If you remove this file, Rails Mini Profiler will use sensible defaults.
