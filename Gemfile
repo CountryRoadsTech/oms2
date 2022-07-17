@@ -88,6 +88,19 @@ group :development, :test do
 
   # Brakeman is used for static security analysis
   gem 'brakeman'
+
+  # RSpec is used to replace the default testing framework
+  gem 'rspec-rails'
+  # Capybara is used to write integration/feature tests
+  gem 'capybara'
+  # Selenium Webdriver is used to simulate how a real user interacts with the web browser during testing
+  gem 'selenium-webdriver'
+  # Factory Bot is used to replace the default tests fixtures
+  gem 'factory_bot_rails'
+  # Shoulda Matchers adds many, common one-line RSpec test matchers
+  gem 'shoulda-matchers'
+  # Faker is used to generate pseudorandom test data
+  gem 'faker'
 end
 
 group :development do
