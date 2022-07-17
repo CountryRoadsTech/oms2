@@ -57,6 +57,9 @@ gem "hiredis"
 # Simple Form is used to simplify creating forms
 gem "simple_form"
 
+# Friendly ID allows setting a model attribute other than ID for its URL slug
+gem "friendly_id", "~> 5.4.2"
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem "debug", platforms: %i[ mri mingw x64_mingw ]

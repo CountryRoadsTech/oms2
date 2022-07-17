@@ -91,6 +91,8 @@ GEM
       tzinfo
     execjs (2.8.1)
     ffi (1.15.5)
+    friendly_id (5.4.2)
+      activerecord (>= 4.0.0)
     fugit (1.5.3)
       et-orbi (~> 1, >= 1.2.7)
       raabro (~> 1.4)
@@ -251,6 +253,7 @@ DEPENDENCIES
   bootstrap (~> 5.1.3)
   connection_pool
   debug
+  friendly_id (~> 5.4.2)
   good_job
   hiredis
   image_processing (~> 1.2)
