@@ -85,6 +85,9 @@ group :development, :test do
   gem 'rubocop-rake', require: false
   # Rubocop Performance adds performance specific checks to Rubocop
   gem 'rubocop-performance', require: false
+
+  # Brakeman is used for static security analysis
+  gem "brakeman"
 end
 
 group :development do
