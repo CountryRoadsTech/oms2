@@ -141,6 +141,7 @@ GEM
     importmap-rails (1.1.5)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
+    iniparse (1.5.0)
     inline_svg (1.8.0)
       activesupport (>= 3.0)
       nokogiri (>= 1.6)
@@ -182,6 +183,10 @@ GEM
     nio4r (2.5.8)
     nokogiri (1.13.7-x86_64-linux)
       racc (~> 1.4)
+    overcommit (0.59.1)
+      childprocess (>= 0.6.3, < 5)
+      iniparse (~> 1.4)
+      rexml (~> 3.2)
     pagy (5.10.1)
       activesupport
     paper_trail (12.3.0)
@@ -359,6 +364,7 @@ DEPENDENCIES
   importmap-rails
   jbuilder
   local_time
+  overcommit
   pagy (~> 5.10)
   paper_trail
   pg (~> 1.1)

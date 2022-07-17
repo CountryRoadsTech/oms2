@@ -118,4 +118,7 @@ group :development do
 
   # Bullet is used to detect N+1 database queries that should be optimized
   gem 'bullet'
+
+  # Overcommit is used to run checks before each 'git commit'
+  gem 'overcommit'
 end
