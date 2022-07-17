@@ -8,4 +8,5 @@ import "@rails/actiontext"
 import "popper"
 import "bootstrap"
 
-import "local-time"
+import LocalTime from "local-time"
+LocalTime.start()
