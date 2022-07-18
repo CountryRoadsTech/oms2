@@ -2,7 +2,7 @@
 
 # Enables soft deleting models so users can later restore them
 module Archivable
-  extends ActiveSupport::Concern
+  extend ActiveSupport::Concern
 
   included do
     default_scope { where(archived_at: nil) }
