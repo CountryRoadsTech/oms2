@@ -83,6 +83,12 @@ gem 'geocoder'
 # Letter Avatar is used to generate default profile pictures for users who do not upload one
 gem 'letter_avatar'
 
+# Amazing Print is used to nicely format Ruby objects
+gem 'amazing_print'
+
+# Rails SQL Prettifier is used to nicely format the output of SQL queries and errors in the log using NiceQL
+gem 'rails_sql_prettifier'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: [:mri, :mingw, :x64_mingw]
