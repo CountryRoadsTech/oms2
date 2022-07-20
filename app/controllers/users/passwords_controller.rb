@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Override Devise's password management controller
 class Users::PasswordsController < Devise::PasswordsController
   # GET /resource/password/new
   # def new

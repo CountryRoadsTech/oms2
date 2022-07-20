@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Override Devise's email confirmation controller
 class Users::ConfirmationsController < Devise::ConfirmationsController
   # GET /resource/confirmation/new
   # def new

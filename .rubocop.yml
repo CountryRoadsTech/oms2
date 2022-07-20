@@ -31,6 +31,9 @@ Rails/CreateTableWithTimestamps:
 Rails/I18nLocaleTexts:
   Enabled: false
 
+Rails/LexicallyScopedActionFilter:
+  Enabled: false
+
 Bundler/OrderedGems:
   Enabled: false
 

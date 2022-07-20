@@ -33,6 +33,16 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.0]
       t.string   :unlock_token
       t.datetime :locked_at
 
+      # OMS Specific Attributes
+      t.text :username, null: false
+      t.text :slug
+
+      # Approved is used to require an admin user manually approve an account before it can sign in successfully
+      t.boolean :approved, default: false, null: false
+
+      t.boolean :admin, default: false, null: false
+
+      t.datetime :archived_at
       t.timestamps null: false
     end
 
@@ -40,5 +50,9 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.0]
     add_index :users, :reset_password_token, unique: true
     add_index :users, :confirmation_token,   unique: true
     add_index :users, :unlock_token,         unique: true
+    add_index :users, :username,             unique: true
+    add_index :users, :slug,                 unique: true
+    add_index :users, :approved
+    add_index :users, :admin
   end
 end

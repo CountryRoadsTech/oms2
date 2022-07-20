@@ -74,6 +74,15 @@ gem 'local_time'
 # Devise is used to add user authentication
 gem 'devise'
 
+# Authtrail is used to track and store login attempts
+gem 'authtrail'
+
+# Geocoder is used to get addresses from IP addresses
+gem 'geocoder'
+
+# Letter Avatar is used to generate default profile pictures for users who do not upload one
+gem 'letter_avatar'
+
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: [:mri, :mingw, :x64_mingw]

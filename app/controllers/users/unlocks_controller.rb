@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Override Devise's account unlock controller
 class Users::UnlocksController < Devise::UnlocksController
   # GET /resource/unlock/new
   # def new

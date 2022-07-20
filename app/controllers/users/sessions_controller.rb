@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Override Devise's sign in controller
 class Users::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
 
