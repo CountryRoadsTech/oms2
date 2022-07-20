@@ -2,6 +2,9 @@
 
 # Override Devise's sign in controller
 class Users::SessionsController < Devise::SessionsController
+  # Never perform user authorization during user authentication!
+  skip_after_action :verify_authorized
+
   # before_action :configure_sign_in_params, only: [:create]
 
   # GET /resource/sign_in

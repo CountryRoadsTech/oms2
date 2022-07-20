@@ -6,6 +6,13 @@ class ApplicationController < ActionController::Base
   # Enables protection from cross-site request forgery (CSRF) attacks
   protect_from_forgery with: :exception
 
+  # Enables user authorization
+  include Pundit
+  # Ensure user authorization is performed for every controller action (unless explicitly skipped)
+  after_action :verify_authorized
+  # Display an alert message or redirect to log in, instead of throwing an error, if the user is not authorized
+  rescue_from Pundit::NotAuthorizedError, with: :user_not_authorized_error
+
   # Track which user made which change with Paper Trail
   before_action :set_paper_trail_whodunnit
 
@@ -21,5 +28,18 @@ class ApplicationController < ActionController::Base
 
   def add_breadcrumb(name, url = nil)
     breadcrumbs << Breadcrumb.new(name, url)
+  end
+
+  private
+
+  def user_not_authorized_error
+    if current_user
+      # Redirect to the previous page with an alert message
+      flash[:alert] = 'You are not allowed to perform this action.'
+      redirect_to(request.referer || root_path)
+    else
+      # Redirect to the sign in page
+      authenticate_user!
+    end
   end
 end

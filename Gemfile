@@ -83,6 +83,9 @@ gem 'geocoder'
 # Letter Avatar is used to generate default profile pictures for users who do not upload one
 gem 'letter_avatar'
 
+# Pundit is used to add user authorization
+gem 'pundit'
+
 # Amazing Print is used to nicely format Ruby objects
 gem 'amazing_print'
 

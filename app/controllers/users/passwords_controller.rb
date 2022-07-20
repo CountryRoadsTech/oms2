@@ -2,6 +2,9 @@
 
 # Override Devise's password management controller
 class Users::PasswordsController < Devise::PasswordsController
+  # Never perform user authorization during user authentication!
+  skip_after_action :verify_authorized
+
   # GET /resource/password/new
   # def new
   #   super

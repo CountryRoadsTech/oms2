@@ -2,6 +2,9 @@
 
 # Override Devise's email confirmation controller
 class Users::ConfirmationsController < Devise::ConfirmationsController
+  # Never perform user authorization during user authentication!
+  skip_after_action :verify_authorized
+
   # GET /resource/confirmation/new
   # def new
   #   super

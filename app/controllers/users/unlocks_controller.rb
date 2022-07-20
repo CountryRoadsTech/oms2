@@ -2,6 +2,9 @@
 
 # Override Devise's account unlock controller
 class Users::UnlocksController < Devise::UnlocksController
+  # Never perform user authorization during user authentication!
+  skip_after_action :verify_authorized
+
   # GET /resource/unlock/new
   # def new
   #   super
