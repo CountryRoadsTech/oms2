@@ -64,6 +64,8 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
   validate :profile_picture_is_correct_format
 
+  belongs_to :organization, inverse_of: :users
+
   has_one_attached :profile_picture
 
   has_rich_text :biography

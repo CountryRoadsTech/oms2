@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_18_213806) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_20_135056) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pgcrypto"
   enable_extension "plpgsql"
@@ -118,6 +118,23 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_18_213806) do
     t.index ["user_type", "user_id"], name: "index_login_activities_on_user"
   end
 
+  create_table "organizations", id: :uuid, default: -> { "gen_random_uuid()" }, force: :cascade do |t|
+    t.uuid "user_id", null: false
+    t.text "name", null: false
+    t.text "slug"
+    t.text "domain"
+    t.text "subdomain"
+    t.jsonb "social_media_urls", default: {"facebook_url"=>""}
+    t.datetime "archived_at"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["domain"], name: "index_organizations_on_domain", unique: true
+    t.index ["name"], name: "index_organizations_on_name", unique: true
+    t.index ["slug"], name: "index_organizations_on_slug", unique: true
+    t.index ["subdomain"], name: "index_organizations_on_subdomain", unique: true
+    t.index ["user_id"], name: "index_organizations_on_user_id"
+  end
+
   create_table "rmp_flamegraphs", force: :cascade do |t|
     t.bigint "rmp_profiled_request_id", null: false
     t.binary "data"
@@ -208,6 +225,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_18_213806) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "organizations", "users"
   add_foreign_key "rmp_flamegraphs", "rmp_profiled_requests"
   add_foreign_key "rmp_traces", "rmp_profiled_requests"
 end
